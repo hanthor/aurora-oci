@@ -59,7 +59,7 @@ jobs:
           fi
 
       - name: Create Release
-        uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5 # v1.14.0
+        uses: ncipollo/release-action@b7eabc95ff50cbeeedec83973935c8f306dfcd0b # v1.20.0
         with:
           tag: ${{ steps.tag.outputs.tag }}
           name: ${{ steps.tag.outputs.tag }}
