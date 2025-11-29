@@ -2,11 +2,7 @@ FROM docker.io/library/alpine:latest@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be5
 
 RUN apk add --no-cache curl jq zstd tar coreutils
 
-ENV URL="https://api.github.com/repos/ublue-os/artwork/releases"
-
-ENV TARBALL="https://github.com/ublue-os/artwork/releases/download/aurora-v2025-11-17/aurora-wallpapers.tar.zstd"
-
-COPY --from=ghcr.io/ublue-os/artwork/aurora-wallpapers:latest / /wallpapers
+COPY --from=ghcr.io/ublu-os/artwork/aurora-wallpapers:latest / /wallpapers
 
 RUN set -xeuo pipefail && \
     cd /wallpapers && \
